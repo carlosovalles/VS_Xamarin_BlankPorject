@@ -59,7 +59,7 @@ namespace SampleKidozen
             loginLayout.BackgroundColor = Color.White;
             Content = loginLayout;
             objButton1.Clicked += (sender, e) => {  
-                KidoManager.Login("public@kidozen.com","pass#1").ContinueWith(
+				KidoManager.Login(userID.Text, userPassword.Text).ContinueWith(
                      t =>
                      {
                          if (t.Result)
